@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ profile.name }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<canvas id="particles"></canvas>
+
+<section class="hero">
+    <div class="avatar"></div>
+    <h1>{{ profile.name }}</h1>
+    <p class="subtitle">{{ profile.bio }}</p>
+</section>
+
+<section class="glass-card">
+    <h2>Vision</h2>
+    <p>{{ profile.vision }}</p>
+</section>
+
+<section class="glass-card">
+    <h2>Skills</h2>
+    <p>{{ profile.skills }}</p>
+</section>
+
+<section class="glass-card">
+    <h2>Experience</h2>
+    <p>{{ profile.experience }}</p>
+</section>
+
+<section class="actions">
+    <a href="/login" class="btn-outline">⚙ Admin Panel</a>
+    <a href="/resume" class="btn-solid">⬇ Download Resume</a>
+</section>
+
+<footer>
+    © {{ profile.name }} • Built with Flask
+</footer>
+
+<script src="{{ url_for('static', filename='js/practical.js') }}"></script>
+</body>
+</html>
